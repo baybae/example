@@ -1,6 +1,6 @@
 
 
- <script type='text/javascript'>//<![CDATA[
+
 /*  DHTML Snowstorm! OO-style Jascript-based Snow effect - Version 1.4.20091115 (Previous rev: v1.3.20081215) - Code by Scott Schiller - http://schillmania.com
 Initializes after body onload() by default (via addEventHandler() call at bottom.)
 To customize properties, edit below or override configuration after this script
@@ -473,4 +473,4 @@ function SnowStorm() {
 snowStorm = new SnowStorm(); 
 snowStorm.snowColor = '#fff'; // salju putih (silakan ganti dengan warna lain)
 
-</script>
+
