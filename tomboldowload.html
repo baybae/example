@@ -1,0 +1,26 @@
+<script>
+	var image = new Image();
+image.crossOrigin = "anonymous";
+image.src = "https://baybae.github.io/albums/couple/cewek/Capture%202022-01-11%2019.15.05.jpg";
+// get file name - you might need to modify this if your image url doesn't contain a file extension otherwise you can set the file name manually
+var fileName = image.src.split(/(\\|\/)/g).pop();
+image.onload = function () {
+    var canvas = document.createElement('canvas');
+    canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
+    canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
+    canvas.getContext('2d').drawImage(this, 0, 0);
+    var blob;
+    // ... get as Data URI
+    if (image.src.indexOf(".jpg") > -1) {
+    blob = canvas.toDataURL("image/jpeg");
+    } else if (image.src.indexOf(".png") > -1) {
+    blob = canvas.toDataURL("image/png");
+    } else if (image.src.indexOf(".gif") > -1) {
+    blob = canvas.toDataURL("image/gif");
+    } else {
+    blob = canvas.toDataURL("image/png");
+    }
+    $("body").html("<b>Click image to download.</b><br><a download='" + fileName + "' href='" + blob + "'><img src='" + blob + "'/></a>");
+};
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
