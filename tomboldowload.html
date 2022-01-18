@@ -24,3 +24,24 @@ image.onload = function () {
 };
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+//e1//
+<!DOCTYPE html>
+<html>
+<body>
+<img id="image" src="blank_light.jpg" style="width:100px">
+<p></p>
+<button class = "change-image">Change Lights</button>
+<script>
+var imageSources = ["green_light.jpg", "yellow_light.jpg", "red_and_yellow_light.jpg", "red_light.jpg", "blank_light.jpg"]
+var buttons = document.getElementsByClassName("change-image")
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function () {
+    document.getElementById("image").src = imageSources[i]
+  }
+}
+</script>
+</body>
+</html>
