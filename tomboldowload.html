@@ -49,6 +49,55 @@ image.onload = function () {
   </body>
 </html>
 
+//no random image//
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <img id="target" src="http://www.java2s.com/style/download.png" width="107" height="98" />
+  <input type="button" onclick="nextPic()" value="change image" />
+
+
+
+    <script>
+    var target = document.getElementById('target');
+    var counter = 0;
+    var myPictures = [
+        "http://www.bildersuche.org/images/logos/pixabay-logo.png",
+        "http://www.bildersuche.org/images/logos/123rf-logo.jpg",
+        "http://www.java2s.com/style/download.png"
+    ];
+
+    function nextPic() {
+      counter += 1;
+      if (counter > myPictures.length -1) {
+        counter = 0;
+      }
+      target.src = myPictures[counter];
+    }
+  </script>
+</body>
+</html>
+
+//no random image//
+var myPicture = [
+  "http://www.bildersuche.org/images/logos/pixabay-logo.png",
+  "http://www.bildersuche.org/images/logos/123rf-logo.jpg",
+  "http://www.java2s.com/style/download.png"
+];
+
+var currentImageIndex = 0;
+
+function nextPic() {
+  currentImageIndex = (currentImageIndex + 1) % myPicture.length;
+  document.images[0].src = myPicture[currentImageIndex];
+}
+
+<img src="http://www.java2s.com/style/download.png" width="107" height="98" />
+<form>
+  <input type="button" onclick="nextPic()" value="Change image">
+</form>
 
 //e1//
 <!DOCTYPE html>
