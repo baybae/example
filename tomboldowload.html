@@ -68,3 +68,37 @@ for (let i = 0; i < buttons.length; i++) {
 </script>
 </body>
 </html>
+ //a3//
+<button class="btn" id="addLeader">Add Leader</button>
+
+</section>
+
+
+<script type="text/javascript">
+
+window.onload = function () {
+
+
+    var ArrayOfImages = ['images/trump.jpg', 'images/putin.jpg', 'images/merkel.jpg', 'images/jinping.jpg'];  //array of images
+    ArrayOfImages.forEach(function (image) {    // for each link l in ArrayOfImages
+        var img = document.createElement('img'); // create an img element
+        img.src = image;                         // set its src to the link l
+        img.height = '300';
+        img.width = '200';
+        img.hspace = '20';
+        document.body.appendChild(img);          // append it to the body 
+    });
+
+
+        var addButton = document.getElementById('addLeader');
+        addButton.addEventListener('click', addLeader);
+
+    }
+
+   function addLeader(){
+    ArrayOfImages.push('images/kimjongun.jpg');
+    console.log(ArrayOfImages);
+   }
+
+
+</script>
