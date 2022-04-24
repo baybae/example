@@ -1,1 +1,6 @@
-{"author":"Jamie Zawinski","id":4,"quote":"Some people, when confronted with a problem, think \u201cI know, I\u2019ll use regular expressions.\u201d Now they have two problems.","permalink":"http://quotes.stormconsultancy.co.uk/quotes/4"}
+{
+        id: 1,
+        author: "Anon",
+        quote: "Lorem ipsum....",
+        permalink: "http://quotes.stormconsultancy.co.uk/quotes/1"
+      }
